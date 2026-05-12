@@ -82,7 +82,7 @@ const Hero = () => {
           <p className="text-gray-300 font-light text-xl md:text-2xl mb-14 leading-relaxed max-w-md">
             Architectural precision <br/> 
             <span className="text-white font-semibold tracking-tight">
-              meets timeless luxury.
+              meets timeless luxury.....
             </span>
           </p>
           
