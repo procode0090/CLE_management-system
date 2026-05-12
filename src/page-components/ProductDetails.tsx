@@ -207,7 +207,9 @@ const ProductDetails = () => {
   const router = useRouter();
   const { id } = router.query;
   const [product, setProduct] = useState<any>(null);
-  const [isSold, setIsSold] = useState(false);
+  // const [isSold, setIsSold] = useState(false);
+  // Change your state declaration at the top of the component:
+const [isSold, setIsSold] = useState<boolean | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   // Scroll Parallax for Hero
@@ -227,7 +229,9 @@ const ProductDetails = () => {
 
         if (productRes.error) throw productRes.error;
         setProduct(productRes.data);
-        setIsSold(saleRes.data && saleRes.data.length > 0);
+        // setIsSold(saleRes.data && saleRes.data.length > 0);
+        // To this:
+setIsSold(!!(saleRes.data && saleRes.data.length > 0));
       } catch (error) {
         console.error("Vault retrieval error:", error);
       } finally {
@@ -331,7 +335,8 @@ const ProductDetails = () => {
             <motion.button 
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              disabled={isSold}
+              // disabled={isSold}
+              disabled={isSold === true || isSold === null}
               className={`w-full py-8 rounded-none flex items-center justify-between px-10 group relative overflow-hidden transition-all duration-700 ${
                 isSold ? 'bg-gray-100 text-gray-400' : 'bg-black text-white'
               }`}
