@@ -63,7 +63,7 @@ const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0 });
           <div className="flex items-center gap-2 border-r border-white/10 pr-6">
             <div className="w-4 h-4 bg-white rounded-full animate-pulse" />
             <span className=" font-black uppercase tracking-[0.2em] text-white text-[16px]">
-              Demo <span className="text-white">Access</span>
+              Demo <span className="text-white">Access </span>
             </span>
           </div>
 
@@ -79,7 +79,7 @@ const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, mins: 0 });
                   <span className="text-sm font-mono font-bold text-white leading-none text-[20px]">
                     {unit.val.toString().padStart(2, '0')}
                   </span>
-                  <span className="text-[7px] font-black uppercase text-white tracking-tighter mt-1 text-[16px]">
+                  <span className=" font-black uppercase text-white tracking-tighter mt-1 text-[16px]">
                     {unit.label}
                   </span>
                 </div>
