@@ -46,10 +46,10 @@ const AdminPanel = ({ mode, children }: { mode: 'inventory' | 'repairs'; childre
             <ChevronLeft size={18} />
             <span className="text-[10px] uppercase tracking-[0.2em] font-black">Exit Department</span>
           </button>
-          <button className="flex items-center gap-4 text-red-400 hover:text-red-600">
+          {/* <button className="flex items-center gap-4 text-red-400 hover:text-red-600">
             <LogOut size={18} />
             <span className="text-[10px] uppercase tracking-[0.2em] font-black">Sign Out</span>
-          </button>
+          </button> */}
         </div>
       </aside>
 

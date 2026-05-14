@@ -50,10 +50,10 @@ const Sidebar = ({ activeTab, setActiveTab }: SidebarProps) => {
         </nav>
       </div>
 
-      <button className="flex items-center gap-4 px-4 py-4 text-gray-400 hover:text-red-500 transition-colors group">
+      {/* <button className="flex items-center gap-4 px-4 py-4 text-gray-400 hover:text-red-500 transition-colors group">
         <LogOut size={18} className="group-hover:-translate-x-1 transition-transform" />
         <span className="text-[10px] uppercase tracking-[0.2em] font-black">Sign Out</span>
-      </button>
+      </button> */}
     </aside>
   );
 };

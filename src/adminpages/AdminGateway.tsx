@@ -9,7 +9,7 @@ const AdminGateway = () => {
 
   // User Data
   const user = {
-    name: "Shan Ali",
+    name: "ADMINISTRATOR",
     role: "Admin",
   };
 
