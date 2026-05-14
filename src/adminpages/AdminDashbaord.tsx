@@ -308,11 +308,32 @@ const AdminDashboard = () => {
         </header>
 
         {/* STATS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <StatCard title="Current Revenue" value={`$${metrics.monthlyRevenue.toLocaleString()}`} icon={TrendingUp} trend="Monthly Accrual" />
           <StatCard title="Active Holdings" value={metrics.stockCount} icon={Box} trend="In-Vault Units" />
           <StatCard title="Client Base" value={metrics.uniqueClients} icon={Users} trend="Verified Entities" />
-        </div>
+        </div> */}
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+  <StatCard 
+    title="Current Revenue" 
+    value={`$${metrics.monthlyRevenue.toLocaleString()}`} 
+    icon={TrendingUp} 
+    trend="Monthly Accrual" 
+  />
+  <StatCard 
+    title="Active Holdings" 
+    value={String(metrics.stockCount ?? 0)} // Convert number to string and handle nulls
+    icon={Box} 
+    trend="In-Vault Units" 
+  />
+  <StatCard 
+    title="Client Base" 
+    value={String(metrics.uniqueClients ?? 0)} // Convert number to string and handle nulls
+    icon={Users} 
+    trend="Verified Entities" 
+  />
+</div>
 
         {/* GRAPHS */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
